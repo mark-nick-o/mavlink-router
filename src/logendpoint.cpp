@@ -136,7 +136,7 @@ void LogEndpoint::_delete_old_logs()
         free_space = UINT64_MAX;
         log_error("[Log Deletion] Error when measuring free disk space: %m");
     }
-    log_debug("[Log Deletion]  Total free space: %lumb. Min free space: %lumb",
+    log_debug("[Log Deletion]  Total free space: %llumb. Min free space: %lumb",
               free_space / (1ul << 20), _config.min_free_space / (1ul << 20));
 
     // This check is not necessary, it just saves on some file IO.
